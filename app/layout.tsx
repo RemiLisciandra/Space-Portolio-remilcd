@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
-import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
+import StarsCanvas from "@/components/layouts/StarBackground";
+import Navbar from "@/components/layouts/header/Navbar";
+import Footer from "@/components/layouts/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  title: "Portfolio - Rémi LCD",
+  description: "Portfolio de Rémi LCD",
 };
 
 export default function RootLayout({
