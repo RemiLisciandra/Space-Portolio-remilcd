@@ -10,7 +10,7 @@ const Projects = () => {
       <h1 className="text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500">
         Mes derniers projets persos
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row flex-wrap justify-center gap-10 px-5 max-w-7xl my-2">
+      <div className="h-full w-full flex flex-col md:flex-row flex-wrap justify-center gap-10 px-5 max-w-7xl mt-4">
         <ProjectCard
           src="/projects/MoviesFinder.png"
           title="MoviesFinder"

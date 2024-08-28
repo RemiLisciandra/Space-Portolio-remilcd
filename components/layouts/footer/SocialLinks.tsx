@@ -27,7 +27,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="min-w-[200px] h-auto flex flex-col items-center justify-start z-[20]">
+    <div className="min-w-[200px] h-auto flex flex-col items-center justify-start z-[20] mt-4">
       <h1 className="text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500">
         Me contacter
       </h1>
