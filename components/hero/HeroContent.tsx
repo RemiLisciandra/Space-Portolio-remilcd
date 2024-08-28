@@ -22,7 +22,7 @@ const HeroContent = () => {
           variants={slideInFromTop}
           className="Welcome-box py-[4px] lg:py-[8px] px-[2px] lg:px-[7px] border border-cyan-500 opacity-[0.9]"
         >
-          <SparklesIcon className="text-green-400 mr-[5px] lg:mr-[10px] h-4 lg:h-5 w-4 lg:w-5" />
+          <SparklesIcon className="text-green-500 mr-[5px] lg:mr-[10px] h-4 lg:h-5 w-4 lg:w-5" />
           <h1 className="Welcome-text text-xs sm:text-sm md:text-base lg:text-sm xl:text-base">
             Portfolio basé sur un projet original, modifié par Rémi LCD
           </h1>
@@ -49,33 +49,40 @@ const HeroContent = () => {
           className="text-sm lg:text-lg text-gray-400 mb-3 lg:mb-5 max-w-[600px]"
         >
           <p>
-            Hello, je m&apos;appelle Rémi. J&apos;ai 22 ans et je suis
-            développeur depuis 5 ans, avec une forte préférence pour le
-            développement backend.
+            Hello, je m&apos;appelle Rémi. Je suis développeur depuis 5 ans,
+            avec une forte préférence pour le développement backend.
           </p>
           <p>
             J&apos;ai 2 ans d&apos;expérience avec Symfony et 1 an avec React.
           </p>
           <p className="mt-2">
-            React me permet de créer des applications ergonomiques, en offrant
-            une très bonne UI/UX.
-          </p>
-          <p>
             Symfony me permet de gérer la partie serveur de manière efficace,
             notamment en créant et en gérant des API robustes.
+          </p>
+          <p>
+            React me permet de créer des applications ergonomiques, en offrant
+            une très bonne UI/UX.
           </p>
         </motion.div>
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="hidden lg:flex w-full h-full justify-center items-center"
+        className="hidden lg:flex flex-col items-center w-full h-full justify-center"
       >
-        <Image
-          src="/me/me.png"
-          alt="profile-picture"
-          height={350}
-          width={350}
-        />
+        <div className="max-w-xs w-full rounded-2xl overflow-hidden">
+          <Image
+            src="/me/me.png"
+            alt="profile-picture"
+            className="aspect-[14/13] w-full rounded-2xl object-cover"
+            width={350}
+            height={350}
+          />
+          <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">
+            Rémi Lisciandra
+          </h3>
+          <p className="text-base leading-7 text-gray-300">22 ans</p>
+          <p className="text-sm leading-6 text-gray-500">Orléans, France</p>
+        </div>
       </motion.div>
     </motion.div>
   );
