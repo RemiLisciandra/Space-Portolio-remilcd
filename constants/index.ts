@@ -35,9 +35,21 @@ export const FRONTEND_SKILL = [
     width: 70,
     height: 70,
   },
+  {
+    skill_name: "Twig",
+    Image: "/skills/hard/frontend/twig.png",
+    width: 45,
+    height: 45,
+  },
 ];
 
 export const BACKEND_SKILL = [
+  {
+    skill_name: "PHP",
+    Image: "/skills/hard/backend/php.png",
+    width: 90,
+    height: 90,
+  },
   {
     skill_name: "Symfony",
     Image: "/skills/hard/backend/symfony.webp",
@@ -88,5 +100,20 @@ export const DATABASE_SKILL = [
     Image: "/skills/hard/database/prisma.webp",
     width: 60,
     height: 60,
+  },
+];
+
+export const ARCHITECTURE_SKILL = [
+  {
+    skill_name: "Linux",
+    Image: "/skills/hard/architecture/linux.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Apache",
+    Image: "/skills/hard/architecture/apache.png",
+    width: 100,
+    height: 100,
   },
 ];

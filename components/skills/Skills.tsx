@@ -1,4 +1,9 @@
-import { BACKEND_SKILL, FRONTEND_SKILL, DATABASE_SKILL } from "@/constants";
+import {
+  BACKEND_SKILL,
+  FRONTEND_SKILL,
+  DATABASE_SKILL,
+  ARCHITECTURE_SKILL,
+} from "@/constants";
 import React from "react";
 import SkillDataProvider from "./SkillDataProvider";
 import SkillText from "./SkillText";
@@ -36,6 +41,18 @@ const Skills = () => {
       </div>
       <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {DATABASE_SKILL.map((image, index) => (
+          <SkillDataProvider
+            key={index}
+            src={image.Image}
+            width={image.width}
+            height={image.height}
+            index={index}
+          />
+        ))}
+      </div>
+
+      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        {ARCHITECTURE_SKILL.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
