@@ -2,14 +2,15 @@
 
 import React from "react";
 import HeroContent from "./HeroContent";
-import BlackHoleVideo from "./BlackHoleVideo";
+import BlackHoleVideo from "../layouts/BlackHoleVideo";
+import HeroContainer from "./HeroContainer";
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col h-full w-full" id="about-me">
+    <HeroContainer>
       <BlackHoleVideo />
       <HeroContent />
-    </div>
+    </HeroContainer>
   );
 };
 
