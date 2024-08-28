@@ -1,4 +1,4 @@
-## Getting Started
+## Pour bien commencer
 
 Quelques rappels des commandes Next essentielles :
 
