@@ -20,7 +20,7 @@ const DownloadButton = () => {
           document.body.removeChild(link);
 
           toast.success("Téléchargement du CV en cours !", {
-            position: "top-center",
+            position: "bottom-right",
             autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,

@@ -7,6 +7,18 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SocialLinks = () => {
+  const handleMailClick = () => {
+    toast.info("Préparation de l'e-mail en cours...", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   const links = [
     {
       name: "LinkedIn",
@@ -22,7 +34,7 @@ const SocialLinks = () => {
       name: "remi.lisciandra@icloud.com",
       icon: <HiOutlineMail className="text-[24px]" />,
       url: "mailto:remi.lisciandra@icloud.com",
-      onClick: () => toast.info("Préparation de l'e-mail en cours..."),
+      onClick: handleMailClick,
     },
   ];
 
@@ -37,7 +49,7 @@ const SocialLinks = () => {
           href={link?.url}
           target="_blank"
           onClick={link?.onClick}
-          className="relative flex flex-row items-start justify-center cursor-pointer group z-[20] my-2"
+          className="relative flex flex-row items-start justify-center cursor-pointer group my-2"
         >
           {link?.icon}
           <span className="text-base ml-[6px] text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-green-500 relative">
@@ -46,7 +58,7 @@ const SocialLinks = () => {
           </span>
         </a>
       ))}
-      <ToastContainer />
+      <ToastContainer className="z-[40]" />
     </div>
   );
 };

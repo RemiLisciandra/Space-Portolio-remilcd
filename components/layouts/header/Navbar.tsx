@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-5">
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-30 px-5">
       <div className="w-full h-full flex flex-row items-center justify-between m-auto">
         <NavLinks />
         <div className="flex flex-row gap-5">
