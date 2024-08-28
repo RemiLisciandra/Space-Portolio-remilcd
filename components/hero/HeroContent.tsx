@@ -20,7 +20,7 @@ const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-3 lg:gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[4px] lg:py-[8px] px-[4px] lg:px-[7px] border border-cyan-500 opacity-[0.9]"
+          className="Welcome-box py-[4px] lg:py-[8px] px-[2px] lg:px-[7px] border border-cyan-500 opacity-[0.9]"
         >
           <SparklesIcon className="text-green-400 mr-[5px] lg:mr-[10px] h-4 lg:h-5 w-4 lg:w-5" />
           <h1 className="Welcome-text text-xs sm:text-sm md:text-base lg:text-sm xl:text-base">
