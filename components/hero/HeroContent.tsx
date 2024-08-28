@@ -15,7 +15,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse lg:flex-row items-center justify-center px-10 lg:px-20 mt-20 lg:mt-40 w-full z-[20]"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center px-5 lg:px-20 mt-20 lg:mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-3 lg:gap-5 justify-center m-auto text-start">
         <motion.div
@@ -23,14 +23,14 @@ const HeroContent = () => {
           className="Welcome-box py-[4px] lg:py-[8px] px-[4px] lg:px-[7px] border border-cyan-500 opacity-[0.9]"
         >
           <SparklesIcon className="text-green-400 mr-[5px] lg:mr-[10px] h-4 lg:h-5 w-4 lg:w-5" />
-          <h1 className="Welcome-text text-sm lg:text-base">
+          <h1 className="Welcome-text text-xs sm:text-sm md:text-base lg:text-sm xl:text-base">
             Portfolio basé sur un projet original, modifié par Rémi LCD
           </h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-4 lg:gap-6 mt-4 lg:mt-6 text-4xl lg:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-4 lg:gap-6 mt-4 lg:mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <p>
             Développeur&nbsp;Full&nbsp;Stack
