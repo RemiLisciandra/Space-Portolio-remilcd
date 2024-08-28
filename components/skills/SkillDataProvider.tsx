@@ -10,9 +10,10 @@ interface Props {
   width: number;
   height: number;
   index: number;
+  className?: string;
 }
 
-const SkillDataProvider = ({ src, width, height, index }: Props) => {
+const SkillDataProvider = ({ src, width, height, index, className }: Props) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -31,6 +32,7 @@ const SkillDataProvider = ({ src, width, height, index }: Props) => {
       animate={inView ? "visible" : "hidden"}
       custom={index}
       transition={{ delay: index * animationDelay }}
+      className={className} // Appliquer la className ici
     >
       <Image src={src} width={width} height={height} alt="skill image" />
     </motion.div>
