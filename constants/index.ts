@@ -103,6 +103,21 @@ export const DATABASE_SKILL = [
   },
 ];
 
+export const TEST_SKILL = [
+  {
+    skill_name: "PHPUnit",
+    Image: "/skills/hard/test/phpunit.png",
+    width: 110,
+    height: 110,
+  },
+  {
+    skill_name: "Jest",
+    Image: "/skills/hard/test/jest.png",
+    width: 70,
+    height: 70,
+  },
+];
+
 export const ARCHITECTURE_SKILL = [
   {
     skill_name: "Linux",

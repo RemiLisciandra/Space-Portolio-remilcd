@@ -59,7 +59,7 @@ const SocialLinks = () => {
     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start mt-4">
       <motion.h1
         ref={titleRef}
-        className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500"
+        className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500 z-[20]"
         initial="hidden"
         animate={titleInView ? "visible" : "hidden"}
         variants={itemVariants}

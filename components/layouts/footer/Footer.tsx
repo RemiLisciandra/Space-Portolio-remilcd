@@ -11,7 +11,7 @@ const Footer = () => {
           <SocialLinks />
         </div>
         <FooterCopyRight />
-        <Version text="1.0.0" />
+        <Version text="1.1.0" />
       </div>
     </div>
   );

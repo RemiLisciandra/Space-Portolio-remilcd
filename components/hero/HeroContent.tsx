@@ -37,7 +37,7 @@ const HeroContent = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500">
               React
             </span>
-            /
+            &nbsp;et&nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-green-500 hover:bg-gradient-to-r hover:from-green-500 hover:to-cyan-500">
               Symfony
             </span>

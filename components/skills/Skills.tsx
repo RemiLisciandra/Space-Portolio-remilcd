@@ -5,6 +5,7 @@ import {
   FRONTEND_SKILL,
   DATABASE_SKILL,
   ARCHITECTURE_SKILL,
+  TEST_SKILL,
 } from "@/constants";
 import React, { useState, useEffect } from "react";
 import SkillDataProvider from "./SkillDataProvider";
@@ -60,6 +61,18 @@ const Skills = () => {
 
       <div className="flex flex-row justify-center flex-wrap mt-4 gap-3 sm:gap-5 md:gap-8 items-center">
         {DATABASE_SKILL.map((image, index) => (
+          <SkillDataProvider
+            key={index}
+            src={image.Image}
+            width={isSmallScreen ? image.width / 2 : image.width}
+            height={isSmallScreen ? image.height / 2 : image.height}
+            index={index}
+          />
+        ))}
+      </div>
+
+      <div className="flex flex-row justify-center flex-wrap mt-4 gap-3 sm:gap-5 md:gap-8 items-center">
+        {TEST_SKILL.map((image, index) => (
           <SkillDataProvider
             key={index}
             src={image.Image}
