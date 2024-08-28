@@ -8,14 +8,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 const DownloadButton = () => {
   const handleDownload = () => {
-    const fileUrl = "/cv/CV_2024-08-05_Rémi_LISCIANDRA.pdf";
+    const fileUrl = "/cv/cv.pdf";
 
     fetch(fileUrl, { method: "HEAD" })
       .then((res) => {
         if (res.ok) {
           const link = document.createElement("a");
           link.href = fileUrl;
-          link.download = "CV_2024-08-05_Rémi_LISCIANDRA.pdf";
+          link.download = "CV_Rémi_LISCIANDRA.pdf";
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
