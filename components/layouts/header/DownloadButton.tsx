@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { RxDownload } from "react-icons/rx";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,13 +51,16 @@ const DownloadButton = () => {
   };
 
   return (
-    <button
+    <motion.button
       onClick={handleDownload}
       className="inline-flex items-center bg-gradient-to-r from-green-500 to-cyan-500 text-white font-medium py-2 px-4 rounded hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       Télécharger mon CV
       <RxDownload className="text-[20px] ms-2 flex-shrink-0" />
-    </button>
+    </motion.button>
   );
 };
 
