@@ -13,7 +13,6 @@ const Skills = () => {
     <section
       id="skills"
       className="flex flex-col items-center justify-center h-full relative overflow-hidden py-2"
-      style={{ transform: "scale(0.9" }}
     >
       <SkillText />
 

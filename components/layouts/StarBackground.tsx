@@ -3,6 +3,7 @@
 import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as THREE from "three";
 
 const generateSpherePoints = (
   numPoints: number,
@@ -17,11 +18,6 @@ const generateSpherePoints = (
     const y = radius * Math.sin(phi) * Math.sin(theta);
     const z = radius * Math.cos(phi);
 
-    if (isNaN(x) || isNaN(y) || isNaN(z)) {
-      console.error(`Invalid value detected: x=${x}, y=${y}, z=${z}`);
-      continue;
-    }
-
     positions[i * 3] = x;
     positions[i * 3 + 1] = y;
     positions[i * 3 + 2] = z;
@@ -30,7 +26,7 @@ const generateSpherePoints = (
 };
 
 const StarBackground = (props: any) => {
-  const ref: any = useRef();
+  const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(() => generateSpherePoints(5000, 1.2));
 
   useFrame((state, delta) => {
@@ -46,7 +42,7 @@ const StarBackground = (props: any) => {
         <PointMaterial
           transparent
           color="#fff"
-          size={0.01}
+          size={0.004}
           sizeAttenuation={true}
           depthWrite={false}
         />
