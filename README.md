@@ -1,6 +1,6 @@
 ## Getting Started
 
-Quelques rappel des commandes Next essentielles :
+Quelques rappels des commandes Next essentielles :
 
 ```bash
 npm run dev
