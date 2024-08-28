@@ -24,7 +24,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-green-400 mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text">
-            Portfolio basé sur un projet original, modifié par Rémi Lisciandra
+            Portfolio basé sur un projet original, modifié par Rémi LCD
           </h1>
         </motion.div>
 
