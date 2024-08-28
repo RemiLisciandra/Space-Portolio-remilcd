@@ -1,7 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 import { RxGithubLogo } from "react-icons/rx";
 
 interface Props {
@@ -12,8 +14,27 @@ interface Props {
 }
 
 const ProjectCard = ({ src, title, description, repoLink }: Props) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const transition = { duration: 0.5, ease: "easeOut" };
+
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg p-1 bg-gradient-to-r from-green-500 to-cyan-500 w-full sm:w-80 md:w-96 flex items-center justify-center hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}
+      transition={transition}
+      className="relative overflow-hidden rounded-lg shadow-lg p-1 bg-gradient-to-r from-green-500 to-cyan-500 w-full sm:w-80 md:w-96 flex items-center justify-center hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500"
+    >
       <div className="bg-gray-800 rounded-lg flex flex-col h-full w-full">
         <div className="flex-grow flex items-center justify-center p-4">
           <Image
@@ -41,7 +62,7 @@ const ProjectCard = ({ src, title, description, repoLink }: Props) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
