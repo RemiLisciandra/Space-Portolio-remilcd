@@ -52,9 +52,10 @@ const DownloadButton = () => {
   return (
     <button
       onClick={handleDownload}
-      className="inline-flex items-center bg-gradient-to-r from-green-500 to-cyan-500 text-white font-medium py-2 px-4 rounded hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500"
+      className="inline-flex items-center bg-gradient-to-r from-green-500 to-cyan-500 text-white font-medium py-2 px-4 rounded hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500 text-sm md:text-base"
     >
-      Télécharger mon CV
+      <span className="hidden sm:inline">Télécharger mon CV</span>
+      <span className="sm:hidden">CV</span>
       <RxDownload className="text-[20px] ms-2 flex-shrink-0" />
     </button>
   );

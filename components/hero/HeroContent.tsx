@@ -15,22 +15,22 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col-reverse lg:flex-row items-center justify-center px-10 lg:px-20 mt-20 lg:mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-3 lg:gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-cyan-500 opacity-[0.9]"
+          className="Welcome-box py-[4px] lg:py-[8px] px-[4px] lg:px-[7px] border border-cyan-500 opacity-[0.9]"
         >
-          <SparklesIcon className="text-green-400 mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text">
+          <SparklesIcon className="text-green-400 mr-[5px] lg:mr-[10px] h-4 lg:h-5 w-4 lg:w-5" />
+          <h1 className="Welcome-text text-sm lg:text-base">
             Portfolio basé sur un projet original, modifié par Rémi LCD
           </h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-4 lg:gap-6 mt-4 lg:mt-6 text-4xl lg:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <p>
             Développeur&nbsp;Full&nbsp;Stack
@@ -48,7 +48,7 @@ const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 mb-5 max-w-[600px]"
+          className="text-sm lg:text-lg text-gray-400 mb-3 lg:mb-5 max-w-[600px]"
         >
           <p>
             Hello, je m&apos;appelle Rémi. J&apos;ai 22 ans et je suis
@@ -70,7 +70,7 @@ const HeroContent = () => {
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="hidden lg:flex w-full h-full justify-center items-center"
       >
         <Image
           src="/me/me.png"
