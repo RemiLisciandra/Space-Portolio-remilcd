@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -25,17 +23,17 @@ const SocialLinks = () => {
   const links = [
     {
       name: "LinkedIn",
-      icon: <RxLinkedinLogo className="text-[24px]" />,
+      icon: <RxLinkedinLogo className="text-[24px] text-white" />,
       url: "https://www.linkedin.com/in/r%C3%A9mi-lisciandra-020887206",
     },
     {
       name: "GitHub",
-      icon: <RxGithubLogo className="text-[24px]" />,
+      icon: <RxGithubLogo className="text-[24px] text-white" />,
       url: "https://github.com/RemiLisciandra",
     },
     {
       name: "remi.lisciandra@icloud.com",
-      icon: <HiOutlineMail className="text-[24px]" />,
+      icon: <HiOutlineMail className="text-[24px] text-white" />,
       url: "mailto:remi.lisciandra@icloud.com",
       onClick: handleMailClick,
     },

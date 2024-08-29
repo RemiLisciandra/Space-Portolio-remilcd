@@ -1,6 +1,6 @@
 "use client";
 
-const FooterCopyRight = () => {
+const CopyRight = () => {
   return (
     <div className="my-5 text-xs text-center z-[20]">
       &copy; Rémi LISCIANDRA. Basé sur un projet original de{" "}
@@ -16,4 +16,4 @@ const FooterCopyRight = () => {
   );
 };
 
-export default FooterCopyRight;
+export default CopyRight;
