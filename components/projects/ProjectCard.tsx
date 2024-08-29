@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { RxGithubLogo } from "react-icons/rx";
+import Button from "../ui/Button";
 
 interface Props {
   src: string;
@@ -52,14 +53,16 @@ const ProjectCard = ({ src, title, description, repoLink }: Props) => {
           <p className="mt-2 text-gray-300 text-xs sm:text-sm md:text-base">
             {description}
           </p>
-          <a
+          <Button
             href={repoLink}
             target="_blank"
-            className="mt-auto inline-flex items-center bg-gradient-to-r from-green-500 to-cyan-500 text-white font-medium py-2 px-3 sm:px-4 rounded hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500 text-sm sm:text-base"
+            icon={
+              <RxGithubLogo className="text-[20px] sm:text-[24px] flex-shrink-0" />
+            }
+            className="mt-auto"
           >
             Voir le code source
-            <RxGithubLogo className="text-[20px] sm:text-[24px] ms-2 flex-shrink-0" />
-          </a>
+          </Button>
         </div>
       </div>
     </motion.div>
