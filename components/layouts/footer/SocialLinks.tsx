@@ -52,34 +52,36 @@ const SocialLinks = () => {
   });
 
   return (
-    <div className="min-w-[200px] h-auto flex flex-col items-center justify-start mt-4">
-      <motion.h1
-        ref={titleRef}
-        className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500 z-[20]"
-        initial="hidden"
-        animate={titleInView ? "visible" : "hidden"}
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        Me contacter
-      </motion.h1>
-      <div ref={linksRef}>
-        {links.map((link, index) => (
-          <SocialLink
-            key={index}
-            name={link.name}
-            url={link.url}
-            icon={link.icon}
-            onClick={link.onClick}
-            delay={index * 0.2}
-            inView={linksInView}
-          />
-        ))}
+    <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
+      <div className="min-w-[200px] h-auto flex flex-col items-center justify-start mt-4">
+        <motion.h1
+          ref={titleRef}
+          className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-cyan-500 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-green-500 z-[20]"
+          initial="hidden"
+          animate={titleInView ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          Me contacter
+        </motion.h1>
+        <div ref={linksRef}>
+          {links.map((link, index) => (
+            <SocialLink
+              key={index}
+              name={link.name}
+              url={link.url}
+              icon={link.icon}
+              onClick={link.onClick}
+              delay={index * 0.2}
+              inView={linksInView}
+            />
+          ))}
+        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </div>
   );
 };

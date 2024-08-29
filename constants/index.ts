@@ -41,6 +41,12 @@ export const FRONTEND_SKILL = [
     width: 45,
     height: 45,
   },
+  {
+    skill_name: "Symfony UX",
+    Image: "/skills/hard/frontend/symfony-ux.png",
+    width: 100,
+    height: 100,
+  },
 ];
 
 export const BACKEND_SKILL = [

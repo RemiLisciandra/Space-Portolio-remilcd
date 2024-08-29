@@ -3,9 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ProjectCard from "./ProjectCard";
+import ProjectList from "./ProjectList";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   const { ref: titleRef, inView: titleInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -15,6 +15,30 @@ const Projects = () => {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const projects = [
+    {
+      src: "/projects/MoviesFinder.png",
+      title: "MoviesFinder",
+      description:
+        "Application permettant de rechercher des films avec l'API OMDb. La recherche se lance seulement après 500ms d'inactivité de l'utilisateur, évitant ainsi de spammer l'API tout en offrant une expérience fluide.",
+      repoLink: "https://github.com/RemiLisciandra/movies-project",
+    },
+    {
+      src: "/projects/ElevationGeneratorImage.png",
+      title: "ElevationGeneratorImage",
+      description:
+        "Application permettant de modifier une image en ajoutant de l'ombrage, en arrondissant les contours et en réduisant la taille. L'image peut ensuite être copiée/collée ou téléchargée.",
+      repoLink: "https://github.com/RemiLisciandra/elevation-generator-image",
+    },
+    {
+      src: "/projects/AppleTimer.png",
+      title: "AppleTimer",
+      description:
+        "Application permettant de lancer plusieurs minuteries simultanément, de les mettre en pause et de modifier facilement les durées. Stockage des données des minuteurs dans la mémoire locale du navigateur.",
+      repoLink: "https://github.com/RemiLisciandra/apple-timer",
+    },
+  ];
 
   return (
     <div
@@ -31,26 +55,7 @@ const Projects = () => {
       >
         Mes derniers projets persos
       </motion.h1>
-      <div className="h-full w-full flex flex-col md:flex-row flex-wrap justify-center gap-10 px-5 max-w-7xl mt-4">
-        <ProjectCard
-          src="/projects/MoviesFinder.png"
-          title="MoviesFinder"
-          description="Application permettant de rechercher des films avec l'API OMDb. La recherche se lance seulement après 500ms d'inactivité de l'utilisateur, évitant ainsi de spammer l'API tout en offrant une expérience fluide."
-          repoLink="https://github.com/RemiLisciandra/movies-project"
-        />
-        <ProjectCard
-          src="/projects/ElevationGeneratorImage.png"
-          title="ElevationGeneratorImage"
-          description="Application permettant de modifier une image en ajoutant de l'ombrage, en arondissant les contours et en réduisant la taille. L'image peut ensuite être copier/coller ou télécharger."
-          repoLink="https://github.com/RemiLisciandra/elevation-generator-image"
-        />
-        <ProjectCard
-          src="/projects/AppleTimer.png"
-          title="AppleTimer"
-          description="Application permettant de lancer plusieurs minuteries simultanément, de les mettre en pause et de modifier facilement les durées."
-          repoLink="https://github.com/RemiLisciandra/apple-timer"
-        />
-      </div>
+      <ProjectList projects={projects} />
     </div>
   );
 };

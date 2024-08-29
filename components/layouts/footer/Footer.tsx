@@ -9,11 +9,9 @@ import Version from "./Version";
 const Footer = () => {
   return (
     <FooterContainer>
-      <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-        <SocialLinks />
-      </div>
+      <SocialLinks />
       <FooterCopyRight />
-      <Version text="1.1.0" />
+      <Version text="1.2.0" />
     </FooterContainer>
   );
 };
