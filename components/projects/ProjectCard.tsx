@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { RxGithubLogo } from "react-icons/rx";
-import Button from "../ui/Button";
+import Button from "@/components/ui/Button";
 
 interface Props {
   src: string;

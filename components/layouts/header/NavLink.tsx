@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "./../../ui/Link";
+import Link from "@/components/ui/Link";
 
 interface NavLinkProps {
   href: string;

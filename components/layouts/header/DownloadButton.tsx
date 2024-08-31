@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { RxDownload } from "react-icons/rx";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from "./../../ui/Button";
+import Button from "@/components/ui/Button";
 
 const DownloadButton: React.FC = () => {
   const handleDownload = () => {

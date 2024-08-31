@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import WelcomeBox from "./WelcomeBox";
 import TitleSection from "./TitleSection";
-import DescriptionSection from "./DescriptionSection";
+import DescriptionSection from "./DescriptionContent";
 import ProfileImage from "./ProfileImage";
 
 const HeroContent = () => {
