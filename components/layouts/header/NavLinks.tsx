@@ -14,7 +14,7 @@ const NavLinks: React.FC = () => {
 
   return (
     <div>
-      <div className="hidden lg:flex w-[350px] h-full items-center justify-between lg:mr-15">
+      <div className="hidden lg:flex w-[400px] h-full items-center justify-between lg:mr-15">
         <NavLinkList isVisible={true} />
       </div>
 

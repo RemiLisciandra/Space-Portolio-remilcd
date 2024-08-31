@@ -12,6 +12,7 @@ const NavLinkList: React.FC<NavLinkListProps> = ({ isVisible }) => {
     { href: "#about-me", label: "Qui suis-je ?", delay: 0.1 },
     { href: "#skills", label: "Compétences", delay: 0.2 },
     { href: "#projects", label: "Projets", delay: 0.3 },
+    { href: "#contact-me", label: "Contact", delay: 0.4 },
   ];
 
   return (

@@ -9,7 +9,11 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label }) => {
-  return <Link href={href}>{label}</Link>;
+  return (
+    <Link className="mx-[10px]" href={href}>
+      {label}
+    </Link>
+  );
 };
 
 export default NavLink;
