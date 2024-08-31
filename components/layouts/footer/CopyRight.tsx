@@ -1,16 +1,19 @@
 "use client";
 
+import Link from "@/components/ui/Link";
+
 const CopyRight = () => {
   return (
     <div className="my-5 text-xs text-center z-[20]">
       &copy; Rémi LISCIANDRA. Basé sur un projet original de{" "}
-      <a
-        href="https://github.com/Mif2006/Space-Portolio"
+      <Link
+        href={"https://github.com/Mif2006/Space-Portolio"}
         target="_blank"
-        className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-green-500 hover:from-green-500 hover:to-cyan-500"
+        className="inline-flex"
+        size="xs"
       >
         Mif2006
-      </a>
+      </Link>
       . Tous droits réservés.
     </div>
   );
