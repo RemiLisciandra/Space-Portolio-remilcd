@@ -2,18 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import NavLink from "./NavLink";
 import { fadeInUp } from "@/utils/motion";
+import { NAV_LINKS } from "@/constants";
 
 interface NavLinkListProps {
   isVisible: boolean;
 }
 
 const NavLinkList: React.FC<NavLinkListProps> = ({ isVisible }) => {
-  const links = [
-    { href: "#about-me", label: "Qui suis-je ?", delay: 0.1 },
-    { href: "#skills", label: "Compétences", delay: 0.2 },
-    { href: "#projects", label: "Projets", delay: 0.3 },
-    { href: "#contact-me", label: "Contact", delay: 0.4 },
-  ];
+  const links = NAV_LINKS;
 
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center lg:justify-between space-y-6 lg:space-y-0 w-full">

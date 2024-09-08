@@ -162,3 +162,12 @@ export const PROJECTS = [
     repoLink: "https://github.com/RemiLisciandra/apple-timer",
   },
 ];
+
+export const NAV_LINKS = [
+  { href: "#about-me", label: "Qui suis-je ?", delay: 0.1 },
+  { href: "#skills", label: "Compétences", delay: 0.2 },
+  { href: "#projects", label: "Projets", delay: 0.3 },
+  { href: "#contact-me", label: "Contact", delay: 0.4 },
+];
+
+export const FOOTER_LINKS = [];

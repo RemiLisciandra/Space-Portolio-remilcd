@@ -52,8 +52,4 @@ const Link: React.FC<LinkProps> = ({
   );
 };
 
-const NavLink: React.FC<LinkProps> = (props) => {
-  return <Link {...props} />;
-};
-
-export default NavLink;
+export default Link;
